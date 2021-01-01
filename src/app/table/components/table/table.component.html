@@ -1,0 +1,15 @@
+<p>table works!</p>
+<div *ngIf="error$ | async">E R R O R</div>
+<div *ngIf="isTableLoading$ | async">Is loading!</div>
+<div>
+<table>
+  <tr>
+    <td>{{table.cell11}}</td>
+    <td>{{table.cell12}}</td>
+  </tr>
+  <tr>
+    <td>{{table.cell21}}</td>
+    <td>{{table.cell22}}</td>
+  </tr>
+</table>
+</div>
