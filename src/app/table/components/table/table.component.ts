@@ -15,6 +15,7 @@ import {
 } from '../../store/selectors/tableSelector';
 import { TableDataInterface } from '../../../shared/types/TableDataInterface';
 import { loadTableAction } from '../../store/actions/actions';
+import { changeTableAction } from '../../store/actions/actionsChangeTable';
 
 @Component({
   selector: 'app-table',
@@ -68,5 +69,6 @@ export class TableComponent implements OnInit, OnDestroy, OnChanges {
   }
   changeTable(): void {
     console.log('Change table is pressed');
+    this.store.dispatch(loadTableAction());
   }
 }

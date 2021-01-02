@@ -8,6 +8,8 @@ import { reducers } from './store/reducers/tableReducer';
 import { EffectsModule } from '@ngrx/effects';
 import { TableEffect } from './store/effects/table.effect';
 import { TableService } from './services/table.service';
+import { ChangeTableEffect } from './store/effects/change-table.effect';
+import { tableChangeReducers } from './store/reducers/tableChangeReducer';
 
 const routes = [
   {
@@ -22,7 +24,8 @@ const routes = [
     CommonModule,
     RouterModule.forChild(routes),
     StoreModule.forFeature('tbl', reducers),
-    EffectsModule.forFeature([TableEffect]),
+    StoreModule.forFeature('change', tableChangeReducers),
+    EffectsModule.forFeature([TableEffect, ChangeTableEffect]),
     // ReactiveFormsModule,
   ],
   providers: [TableService],
