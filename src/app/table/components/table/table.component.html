@@ -1,6 +1,7 @@
 <p>table works!</p>
 <div *ngIf="error$ | async">E R R O R</div>
 <div *ngIf="isTableLoading$ | async">Is loading!</div>
+<button (click)="changeTable()">Change table</button>
 <div>
 <table>
   <tr>

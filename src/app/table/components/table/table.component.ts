@@ -66,4 +66,7 @@ export class TableComponent implements OnInit, OnDestroy, OnChanges {
   fetchDataTable(): void {
     this.store.dispatch(loadTableAction());
   }
+  changeTable(): void {
+    console.log('Change table is pressed');
+  }
 }
